@@ -1,0 +1,26 @@
+<head>
+  <title>Task List</title>
+</head>
+
+<body>
+  <header class="container">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <a href="#" class="navbar-brand">Task list</a>        
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          {{> loginButtons}}
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    {{#if currentUser}}
+      {{> newTask}}
+      {{> list}}
+    {{else}}
+      Voce precisa estar logado!
+    {{/if}}
+  </main>
+</body>

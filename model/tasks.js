@@ -1,0 +1,1 @@
+TaskModel = new Mongo.Collection("tasks");
